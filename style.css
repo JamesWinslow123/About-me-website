@@ -1,0 +1,7 @@
+#main-header {
+  background-color: blue;
+  padding: 5px;
+}
+#main-header > * {
+  color: white;
+}
