@@ -1,6 +1,14 @@
 .main-card {
   background-color: rgb(39, 33, 146);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px;
 }
+
+.main-card a {
+  color: antiquewhite;
+}
+
 .card {
   padding: 50px;
   border-radius: 30px;
@@ -9,4 +17,38 @@
 }
 .main-card > * {
   color: white;
+}
+#bio {
+  column-count: 1;
+  text-align: justify;
+  text-justify: inter-word;
+}
+#main-header {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+#main-image-of-james {
+  border-radius: 10px;
+}
+
+@media (min-width: 600px) {
+  .main-card {
+    grid-template-columns: 225px 1fr;
+  }
+  #bio {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-card {
+    justify-items: center;
+  }
+}
+
+@media (min-width: 800px) {
+  #bio {
+    column-count: 2;
+  }
 }
